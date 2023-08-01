@@ -18,7 +18,7 @@
 
             <div class="cabeçalho-link">
                 <li>
-                    <a class="active" href="./">Home</a>
+                    <a class="active" href="../">Home</a>
                 </li>
 
                 <li>
@@ -26,21 +26,21 @@
                 </li>
 
                 <li>
-                    <a href="./servicos.html">Serviços</a>
+                    <a href="./pages/servicos.html">Serviços</a>
                 </li>
 
                 <li>
-                    <a href="./portfolio.html">Portfólio</a>
+                    <a href="./pages/portfolio.html">Portfólio</a>
                 </li>
-                <a href="/contato.html"><div class ="button">Meu Contato</div> </a>
+                <a href="/pages/contato.html"><div class ="button">Meu Contato</div> </a>
             </div><!--cabeçalho-link-->
         </header>
 
         <div class="container-text">
              <div class="text">
                 <h3>Olá, Pessoal</h3>
-                <h1>Eu sou <span>Vinicius Teixeira</span></h1>
-                <p>Designer, Fotógrafo e Videomaker.<br>A arte de contar sua história visualmente.</p>
+                <h1>Eu sou <span id="span"></span></h1>
+                <p>Criatividade, técnica e paixão se unem <br>para revelar a essência de cada instante.</p>
                 <div class="redes-social">
                     <a href="https://www.facebook.com/viniciusctrg" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                     <a href="https://www.instagram.com/v.costt/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -48,15 +48,23 @@
                     <a href="https://wa.me/5553999970698" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
 
                 </div><!--redes-social--> 
-                <a href="/sobre.html"><div class="button btn" >Sobre Mim</div>
+                <a href="/pages/sobre.html"><div class="button btn" >Sobre Mim</div>
             </div><!--text-->
         </div><!--container-text-->
     </div><!--background-->
 
 
 
-    <script type="script.js"></script>    
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+   
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed("#span",{
+    strings:["Vinicius Teixeira","Designer","Videomaker","Fotógrafo"],
+    typeSpeed: 70,
+    backSpeed: 60,
+    loop: true
+});
+    </script>
 
 </body>
 </html>
