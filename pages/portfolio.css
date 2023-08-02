@@ -55,7 +55,7 @@ transition: 0.2s all;
 }
 
 .fotos {
-    background-image: url(/img/FOTOGRAFIA.jpg);
+    background-image: url(../img/FOTOGRAFIA.jpg);
     background-size: cover;
     background-position: center;
 }
