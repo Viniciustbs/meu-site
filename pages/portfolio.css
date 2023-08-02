@@ -43,19 +43,19 @@ transition: 0.2s all;
 }
 
 .design {
-    background-image: url(/img/DESIGN-1.jpg);
+    background-image: url(../img/DESIGN-1.jpg);
     background-size: cover;
     background-position: center;
 }
 
 .videos {
-    background-image: url(/img/ED-VIDEO-3.jpg);
+    background-image: url(../img/ED-VIDEO-3.jpg);
     background-size: cover;
     background-position: center;
 }
 
 .fotos {
-    background-image: url(/img/FOTOGRAFIA.jpg);
+    background-image: url(../img/FOTOGRAFIA.jpg);
     background-size: cover;
     background-position: center;
 }
