@@ -39,50 +39,60 @@
         
         <div class="container-text-portfolio">
             <div class="text">
-                <h1 class="portfolio-texto">DESIGN</h1>
+                <h1 class="portfolio-texto">Design</h1>
                 
             </div><!--text-->
-        <div class="container-portfolio">
-            <div id="openButton">
-                <img src="../../img/ED-VIDEO-3.jpg">
+            <div class="container-portfolio">
+                <div class="portfolio-image">
+                    <img src="../../img/FOTOS/FOTO(1).png" data-src-popup="../../img/FOTOS/FOTO(1).png">
+                </div>
+                <div class="portfolio-image">
+                    <img src="../../img/FOTOS/FOTO(2).png" data-src-popup="../../img/FOTOS/FOTO(2).png">
+                </div>
+                <div class="portfolio-image">
+                    <img src="../../img/FOTOS/FOTO(3).png" data-src-popup="../../img/FOTOS/FOTO(3).png">
+                </div>
+                <div class="portfolio-image">
+                    <img src="../../img/FOTOS/FOTO(4).png" data-src-popup="../../img/FOTOS/FOTO(4).png">
+                </div>
+                <div class="portfolio-image">
+                    <img src="../../img/FOTOS/FOTO(5).png" data-src-popup="../../img/FOTOS/FOTO(5).png">
+                </div>
+                <div class="portfolio-image">
+                    <img src="../../img/FOTOS/FOTO(6).png" data-src-popup="../../img/FOTOS/FOTO(6).png">
+                </div>
+                <div class="portfolio-image">
+                    <img src="../../img/FOTOS/FOTO(7).png" data-src-popup="../../img/FOTOS/FOTO(7).png">
+                </div>
+                <div class="portfolio-image">
+                    <img src="../../img/FOTOS/FOTO(8).png" data-src-popup="../../img/FOTOS/FOTO(8).png">
+                </div>
+                
             </div>
-            <div id="openButton2">
-                <img src="../../img/DESIGN-1.jpg">
-            </div>
-            <div id="openButton3">
-                <img src="../../img/DESIGN-1.jpg">
-            </div>
-            <div id="openButton4">
-                <img src="../../img/DESIGN-1.jpg">
-            </div>
-            <div id="openButton5">
-                <img src="../../img/DESIGN-1.jpg">
-            </div>
-            <div id="openButton6">
-                <img src="../../img/DESIGN-1.jpg">
+            <div id="popup">
+                <img id="popupImage" src="" alt="Imagem Pop-up">
+                <button id="closeButton"><i class="fa-solid fa-xmark" style="color: #ffffff;"></i></button>
             </div>
         </div>
-            <div id="popup">
-                <img src="../../img/DESIGN-1.jpg" alt="Imagem Pop-up">
-                <button id="closeButton">Fechar</button>
-            </div>
-            
-        </div><!--container-text-->
-    </div><!--background-->
+    
+        <script>
+            const popup = document.getElementById("popup");
+            const popupImage = document.getElementById("popupImage");
+            const closeButton = document.getElementById("closeButton");
+            const portfolioImages = document.querySelectorAll(".portfolio-image img");
 
-<script>
-    const openButton = document.getElementById("openButton");
-    const closeButton = document.getElementById("closeButton");
-    const popup = document.getElementById("popup");
+            portfolioImages.forEach((image) => {
+                image.addEventListener("click", () => {
+                    const imageUrl = image.getAttribute("data-src-popup");
+                    popupImage.setAttribute("src", imageUrl);
+                    popup.style.display = "flex";
+                });
+            });
 
-    openButton.addEventListener("click", () => {
-        popup.style.display = "flex";
-    });
+            closeButton.addEventListener("click", () => {
+                popup.style.display = "none";
+            });
 
-    closeButton.addEventListener("click", () => {
-        popup.style.display = "none";
-    });
-
-</script>
-</body>
-</html>    
+        </script>
+    </body>
+    </html>
