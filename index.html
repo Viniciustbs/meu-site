@@ -36,7 +36,7 @@
         <div class="container-text">
              <div class="text">
                 <h3>Olá, Pessoal</h3>
-                <h1>Eu sou <span id="span"></span></h1>
+                <h1 name="identifier" id="identifier"></h1>
                 <p>Criatividade, técnica e paixão se unem <br>para revelar a essência de cada instante.</p>
                 <div class="redes-social">
                     <a href="https://www.facebook.com/viniciusctrg" target="_blank"><i class="fa-brands fa-facebook"></i></a>
@@ -55,6 +55,15 @@
    
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script>
+        
+          
+        var isMobile = window.orientation > -1; 
+        if (isMobile)
+            document.getElementById("identifier").innerHTML = 'Eu sou <br> <span id="span"></span>';
+        else
+            document.getElementById("identifier").innerHTML = 'Eu sou <span id="span"></span>';
+            
+       
         var typed = new Typed("#span",{
             strings:["Vinicius Teixeira","Designer","Videomaker","Fotógrafo"],
             typeSpeed: 70,
@@ -65,6 +74,11 @@
         document.querySelector('.menu-icon').addEventListener('click', function () {
             document.querySelector('.menu-links').classList.toggle('active');
         });
+
+       
+                   
+
+      
 
     </script>
 
