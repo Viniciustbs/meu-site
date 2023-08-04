@@ -35,23 +35,23 @@ header{
     padding-top: 1rem;
 }
 
-.menu-links{
+.cabeçalho-link{
     display: flex;
     gap: 3rem;
     font-weight: 300;
     cursor: pointer;  
 }
 
-.menu-links a{
+.cabeçalho-link a{
     color: #fff;
     font-size: 12px;
 }
 
-.menu-links a:hover{
+.cabeçalho-link a:hover{
     color:  #2ecc71;
     transition: 0.3s all;
 }
-.menu-links a.active{
+.cabeçalho-link a.active{
     color: #2ecc71;
 }
 
@@ -129,61 +129,9 @@ header{
     margin-top: 15px;
 }
 
-@media screen and (max-width: 768px) {
-    .header {
-        flex-direction: column; /* Alinhe verticalmente os itens */
-    }
-
-    .menu-icon {
-        display: block; /* Mostra o ícone de menu */
-    }
-
+@media screen and (max-width:600px){
     .cabeçalho-link {
-        display: none; /* Oculta a lista de links original */
+        display:none;
     }
 
-    /* Estilos para o ícone de menu hamburguer */
-    .menu-icon {
-        cursor: pointer;
-    }
-
-    .bar {
-        width: 25px;
-        height: 3px;
-        background-color: #2ecc71;
-        margin: 3px 0;
-    }
-
-    /* Estilos para a lista de links do menu hamburguer */
-    .menu-links {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        background-color: #1a1919;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 80%;
-        gap: 0;
-        border-radius: 10px;
-        margin-left: 10%;
-
-    }
-
-    .menu-links.active {
-        display: flex;
-    }
-
-    .menu-links li {
-        padding: 20px;
-        width: 100%;
-        text-align: center;
-    }
-
-    .menu-links a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 16px;
-        
-    }
 }

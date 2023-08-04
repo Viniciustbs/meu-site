@@ -16,25 +16,22 @@
             <div class="logo">
                 <i class="fa-regular fa-v"></i>
             </div><!--logo-->
-
-            <div class="cabeçalho-link">
-                <li>
-                    <a href="../">Home</a>
-                </li>
-
-                <li>
-                    <a class="active" href="#">Sobre</a>
-                </li>
-
-                <li>
-                    <a href="./servicos.html">Serviços</a>
-                </li>
-
-                <li>
-                    <a href="./portfolio.html">Portfólio</a>
-                </li>
-                <a href="./contato.html"><div class ="button">Meu Contato</div> </a>
-            </div><!--cabeçalho-link-->
+        
+            <!-- Ícone de menu hamburguer -->
+            <div class="menu-icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        
+            <!-- Lista de links do menu hamburguer -->
+            <ul class="menu-links">
+                <li><a  href="../">Home</a></li>
+                <li><a class="active" href="#">Sobre</a></li>
+                <li><a href="./servicos.html">Serviços</a></li>
+                <li><a href="./portfolio.html">Portfólio</a></li>
+                <li><a href="./contato.html">Contato</a></li>
+            </ul>
         </header>
 
         <div class="container-text">
@@ -73,6 +70,13 @@
 
     <script type="script.js"></script>    
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        
+        document.querySelector('.menu-icon').addEventListener('click', function () {
+            document.querySelector('.menu-links').classList.toggle('active');
+        });
+
+    </script>
 
 </body>
 </html>
