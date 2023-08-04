@@ -23,7 +23,7 @@
                 <div class="bar"></div>
             </div>
         
-            <!-- Lista de links do menu hamburguer -->
+            <!-- Lista de links do menu / menu hamburguer -->
             <ul class="menu-links">
                 <li><a class="active" href="#">Home</a></li>
                 <li><a href="./pages/sobre.html">Sobre</a></li>
@@ -55,30 +55,25 @@
    
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script>
-        
-          
+        // IsMobile pergunta ao navegador se o dispositivo é mobile ou móvel, de acordo com a resolução apresentada.
+        //Se retornado mobile, apresenta a variável com o BR, se retornado desktop, apresenta a variável sem o BR.  
         var isMobile = window.orientation > -1; 
         if (isMobile)
             document.getElementById("identifier").innerHTML = 'Eu sou <br> <span id="span"></span>';
         else
             document.getElementById("identifier").innerHTML = 'Eu sou <span id="span"></span>';
             
-       
+        //A variável abaixo determina o nome apresentado após o "eu sou".
         var typed = new Typed("#span",{
             strings:["Vinicius Teixeira","Designer","Videomaker","Fotógrafo"],
             typeSpeed: 70,
             backSpeed: 60,
             loop: true
         });
-
+        // O script abaixo determina a função de abertura do menu hamburger no dispositivo móvel.
         document.querySelector('.menu-icon').addEventListener('click', function () {
             document.querySelector('.menu-links').classList.toggle('active');
         });
-
-       
-                   
-
-      
 
     </script>
 
