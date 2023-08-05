@@ -93,6 +93,7 @@ header{
 .servico-container-text{
     margin-top: 4.5%;
     margin-left: 10%;
+    width: 50%;
 }
 
 .servicos-text h3{
@@ -210,9 +211,9 @@ header{
     }
     
     .servico-container-text{
-        margin-top: 7%;
+        margin-top: 10%;
         margin-left: 10%;
-        margin-right: 10%;
+        width: 65%;
     }
     
 }

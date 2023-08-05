@@ -1,0 +1,101 @@
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Alinhe verticalmente os itens */
+    }
+
+    .menu-icon {
+        display: block; /* Mostra o ícone de menu */
+    }
+
+    .cabeçalho-link {
+        display: none; /* Oculta a lista de links original */
+    }
+
+    /* Estilos para o ícone de menu hamburguer */
+    .menu-icon {
+        cursor: pointer;
+    }
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #2ecc71;
+        margin: 3px 0;
+    }
+
+    /* Estilos para a lista de links do menu hamburguer */
+    .menu-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #1a1919;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 80%;
+        gap: 0;
+        border-radius: 10px;
+        margin-left: 10%;
+
+    }
+
+    .menu-links.active {
+        display: flex;
+    }
+
+    .menu-links li {
+        padding: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-links a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        
+    }
+
+    .container-text-portfolio { 
+        padding: 30px 0 0 0px;
+    }
+    
+    .portfolio-texto {
+        text-align: center;
+        padding: 0px !important;
+    }
+
+    .container-imagens {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 5%;
+        padding-bottom: 5%;
+     
+        align-items: center;
+    
+    }
+
+    .box {
+        width: 60vw ;
+        height: 35vw;
+        color: aliceblue;
+        font-size: clamp(12px, 2vw, 23px);
+        border-radius: 10px;
+        overflow: hidden;
+        cursor: pointer;
+        border: 2px solid black;
+        margin-bottom: 10%;
+        }
+    
+    .box-text {
+        backdrop-filter: blur(5px);
+        width: 100%;
+        height: 100%;
+        align-items: center; /* alinhando verticalmente */ 
+        display: flex;
+        justify-content: center; /* alinhando horizontalmente */
+        font-size: 16px;
+    }
+    
+}
