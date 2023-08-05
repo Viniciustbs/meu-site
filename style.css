@@ -74,11 +74,10 @@ header{
     color: #2ecc71;
     background: transparent;
     border:solid 1px #2ecc71;
-    padding: 5px;
+    padding: 5px 45px ;
     border-radius: 15px;
     font-size: 12px;
     cursor: pointer;
-    width: 150px;
     text-align: center;
 }
 
@@ -88,6 +87,8 @@ header{
     color: #fff;
     transition: 0.5s;
 }
+
+
 
 .container-text{
     margin-top: 10%;
@@ -117,6 +118,7 @@ header{
 
 .redes-social{
     margin-top: 10px;
+    margin-bottom: 15px;
 }
 
 .redes-social a{

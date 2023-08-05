@@ -1,3 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+
+
+
+.background{
+    background: linear-gradient(rgba(0, 0, 0, 0.123), rgba(0, 0, 0, 0.384)),url(../img/background-2.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+   
+   }
+
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.menu-links{
+    display: flex;
+    gap: 3rem;
+    font-weight: 300;
+    cursor: pointer;  
+}
+
+.menu-links a{
+    color: #fff;
+    font-size: 12px;
+}
+
+.menu-links a:hover{
+    color:  #2ecc71;
+    transition: 0.3s all;
+}
+.menu-links a.active{
+    color: #2ecc71;
+}
+
+.logo i{
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    border: 1px solid #2ecc71;
+    color: #2ecc71;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    
+}
+
+
+.button{
+    color: #2ecc71;
+    background: transparent;
+    border:solid 1px #2ecc71;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+}
+
+
+.button:hover{
+    background-color: #2ecc71;
+    color: #fff;
+    transition: 0.5s;
+}
+
+
 .servico-container-text{
     margin-top: 4.5%;
     margin-left: 10%;
@@ -23,3 +115,105 @@
     margin-top: 10px;
     font-size: 11px;
 }
+
+.redes-social{
+    margin-top: 10px;
+}
+
+.redes-social a{
+    color: #2ecc71;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.btn{
+    margin-top: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Alinhe verticalmente os itens */
+    }
+
+    .menu-icon {
+        display: block; /* Mostra o ícone de menu */
+    }
+
+    .cabeçalho-link {
+        display: none; /* Oculta a lista de links original */
+    }
+
+    /* Estilos para o ícone de menu hamburguer */
+    .menu-icon {
+        cursor: pointer;
+    }
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #2ecc71;
+        margin: 3px 0;
+    }
+
+    /* Estilos para a lista de links do menu hamburguer */
+    .menu-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #1a1919;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 80%;
+        gap: 0;
+        border-radius: 10px;
+        margin-left: 10%;
+
+    }
+
+    .menu-links.active {
+        display: flex;
+    }
+
+    .menu-links li {
+        padding: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-links a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        
+    }
+
+    .background{
+        background: linear-gradient(rgba(0, 0, 0, 0.123), rgba(0, 0, 0, 0.384)),url(../img/mobile-background.jpg);
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100vh;
+       
+       }
+    
+   
+       
+
+    .servicos-texto {
+        margin-top: 10px;
+        margin-right: 10%;
+      }
+    
+    .servicos-titulo {
+      margin-top: 0;
+    }
+    
+    .servico-container-text{
+        margin-top: 7%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+}
+
