@@ -94,6 +94,17 @@ header{
     margin-left: 10%;
 }
 
+.contato-texto-p {
+
+    width: 100%;
+    height: 100%;
+    align-items: center; /* alinhando verticalmente */ 
+    display: flex;
+    justify-content: center; /* alinhando horizontalmente */
+    text-align: center;
+    padding-top: 20px;
+}
+
 .text h3{
     color: #fff;
     font-size: 15px;
@@ -111,8 +122,8 @@ header{
 .text p{
     color: #fff;
     font-weight: 500;
-    margin-top: 10px;
     font-size: 11px;
+
 }
 
 .redes-social{
@@ -205,6 +216,17 @@ header{
     display: flex;
     justify-content: center; /* alinhando horizontalmente */
     text-align: center;
+}
+
+.contato-texto-p {
+
+    width: 100%;
+    height: 100%;
+    align-items: center; /* alinhando verticalmente */ 
+    display: flex;
+    justify-content: center; /* alinhando horizontalmente */
+    text-align: center;
+    padding-top: 20px;
 }
 
 .contato-text h3{
