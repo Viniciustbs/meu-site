@@ -19,6 +19,7 @@
 }
 
 .background{
+    background-color: black;
     background: linear-gradient(rgba(0, 0, 0, 0.123), rgba(0, 0, 0, 0.384)),url(../img/background-2.jpg);
     background-attachment: fixed;
     background-size: cover;
@@ -132,7 +133,8 @@ header{
     color: #fff;
     font-weight: 500;
     margin-top: 10px;
-    font-size: 11px;
+    font-size: clamp( 12px, 0.8vw, 16px);
+    
 }
 
 .redes-social{

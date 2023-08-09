@@ -14,11 +14,16 @@
 
 
 .background{
+    background-color: black;
     background: linear-gradient(rgba(0, 0, 0, 0.123), rgba(0, 0, 0, 0.384)),url(../../img/background.jpg);
+    background-attachment: fixed;
     background-size: cover;
+    position: fixed;
     background-position: center;
     width: 100%;
     height: 100vh;
+    z-index: -1;
+    background-repeat: no-repeat;
    
    }
 
@@ -92,16 +97,18 @@ header{
 .container-text{
     margin-top: 10%;
     margin-left: 10%;
+
 }
 
 .text h3{
     color: #fff;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .text h1{
     color: #fff;
     margin-top: 10px;
+    font-size: clamp(30px, 2vw, 80px);
 }
 
 .text span{
@@ -129,86 +136,24 @@ header{
     margin-top: 15px;
 }
 
-@media screen and (max-width: 768px) {
-    .header {
-        flex-direction: column; /* Alinhe verticalmente os itens */
-    }
-
-    .menu-icon {
-        display: block; /* Mostra o ícone de menu */
-    }
-
-    .cabeçalho-link {
-        display: none; /* Oculta a lista de links original */
-    }
-
-    /* Estilos para o ícone de menu hamburguer */
-    .menu-icon {
-        cursor: pointer;
-    }
-
-    .bar {
-        width: 25px;
-        height: 3px;
-        background-color: #2ecc71;
-        margin: 3px 0;
-    }
-
-    /* Estilos para a lista de links do menu hamburguer */
-    .menu-links {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        background-color: #1a1919;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 80%;
-        gap: 0;
-        border-radius: 10px;
-        margin-left: 10%;
-        z-index: 1;
-
-    }
-
-    .menu-links.active {
-        display: flex;
-    }
-
-    .menu-links li {
-        padding: 20px;
-        width: 100%;
-        text-align: center;
-        width: 100%;
-    }
-
-    .menu-links a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 16px;
-        width: 100%;      
-    }
-
-    
-}
 
 
 
 .container-text-portfolio { 
-    padding: 60px 0 0 0px;
+    padding: 50px 0 0 0px;
 }
 
 .portfolio-texto {
     text-align: center;
-    padding: 0px !important;
 }
 
 .container-portfolio {
     display: flex;
     justify-content: center;
     gap: 2%;
-    padding-top: 5%;
+    padding-top: 10%;
     flex-wrap: wrap;
+   
 }
 
 .container-portfolio img {
@@ -284,16 +229,80 @@ header{
 @media screen and (max-width:600px){
     .portfolio-image {
         
-        min-width: 40%;
+       min-width: 40%;
        min-height: 80px;
     }
 
     .container-text-portfolio { 
         padding: 55px 0 0 0px;
+        margin-bottom: 10%;
     }
 
     .container-portfolio {
         width: 100%;
         overflow: hidden;
     }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Alinhe verticalmente os itens */
+    }
+
+    .menu-icon {
+        display: block; /* Mostra o ícone de menu */
+    }
+
+    .cabeçalho-link {
+        display: none; /* Oculta a lista de links original */
+    }
+
+    /* Estilos para o ícone de menu hamburguer */
+    .menu-icon {
+        cursor: pointer;
+    }
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #2ecc71;
+        margin: 3px 0;
+    }
+
+    /* Estilos para a lista de links do menu hamburguer */
+    .menu-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #1a1919;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 80%;
+        gap: 0;
+        border-radius: 10px;
+        margin-left: 10%;
+        z-index: 1;
+
+    }
+
+    .menu-links.active {
+        display: flex;
+    }
+
+    .menu-links li {
+        padding: 20px;
+        width: 100%;
+        text-align: center;
+        width: 100%;
+    }
+
+    .menu-links a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        width: 100%;      
+    }
+
+    
 }
