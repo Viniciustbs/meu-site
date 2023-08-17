@@ -67,8 +67,10 @@
                 
             </div>
             <div id="popup">
+                <button id="prevButton"><i class="fas fa-chevron-left"></i></button>
                 <img id="popupImage" src="" alt="Imagem Pop-up">
-                <button id="closeButton"><i class="fa-solid fa-xmark" style="color: #ffffff;"></i></button>
+                <button id="nextButton"><i class="fas fa-chevron-right"></i></button>
+                <button id="closeButton"><i class="fa-solid fa-xmark" style="color: #2ecc71;"></i></button>
             </div>
         </div>
     
@@ -77,6 +79,8 @@
             const popupImage = document.getElementById("popupImage");
             const closeButton = document.getElementById("closeButton");
             const portfolioImages = document.querySelectorAll(".portfolio-image img");
+            const prevButton = document.getElementById("prevButton");
+            const nextButton = document.getElementById("nextButton");
 
             portfolioImages.forEach((image) => {
                 image.addEventListener("click", () => {
@@ -92,6 +96,34 @@
             
             document.querySelector('.menu-icon').addEventListener('click', function () {
                 document.querySelector('.menu-links').classList.toggle('active');
+            });
+
+            let currentImageIndex = 0;
+            const portfolioImagesArray = Array.from(portfolioImages);
+
+            portfolioImages.forEach((image, index) => {
+                image.addEventListener("click", () => {
+                    currentImageIndex = index;
+                    const imageUrl = image.getAttribute("data-src-popup");
+                    popupImage.setAttribute("src", imageUrl);
+                    popup.style.display = "flex";
+                });
+            });
+
+            prevButton.addEventListener("click", () => {
+                currentImageIndex = (currentImageIndex - 1 + portfolioImagesArray.length) % portfolioImagesArray.length;
+                const imageUrl = portfolioImagesArray[currentImageIndex].getAttribute("data-src-popup");
+                popupImage.setAttribute("src", imageUrl);
+            });
+
+            nextButton.addEventListener("click", () => {
+                currentImageIndex = (currentImageIndex + 1) % portfolioImagesArray.length;
+                const imageUrl = portfolioImagesArray[currentImageIndex].getAttribute("data-src-popup");
+                popupImage.setAttribute("src", imageUrl);
+            });
+
+            closeButton.addEventListener("click", () => {
+                popup.style.display = "none";
             });
             
         </script>
