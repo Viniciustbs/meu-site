@@ -207,6 +207,7 @@ header{
     background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
+    
 }
 
 #popup img {
@@ -245,6 +246,10 @@ header{
     width: 50px;
     text-align: center;
 
+}
+
+#popupImage{
+    border-radius: 10px;
 }
 
 
