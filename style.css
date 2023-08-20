@@ -40,7 +40,7 @@
     height: 100vh;       
     z-index: -1;
     position: fixed;
-   
+    overflow: auto;
    }
 
 
@@ -151,6 +151,8 @@ header{
 .btn{
     margin-top: 15px;
 }
+
+
 
 @media screen and (max-width: 768px) {
     .header {
