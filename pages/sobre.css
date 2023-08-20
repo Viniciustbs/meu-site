@@ -172,10 +172,21 @@ header{
     margin-top: 15px;
 }
 
+.text-skills{
+    color: #fff;
+    margin-top: 4%;
+    margin-left: 9vw;
+    font-size: 16px;
+
+}
+.text-skills span{
+    color: #2ecc71; 
+}
+
 .skills {
     display: flex;
     align-items: center;
-    margin-top: 4%;
+    margin-top: 2%;
     margin-left: 9vw;
 }
 
@@ -374,6 +385,17 @@ header{
         width: 24px; /* Ajuste conforme necessário */
         height: 24px; /* Ajuste conforme necessário */
         filter: invert(54%) sepia(94%) saturate(346%) hue-rotate(93deg) brightness(101%) contrast(92%);
+    }
+
+    .text-skills{
+        color: #fff;
+        margin-top: 4%;
+        margin-left: auto;
+        text-align: center;
+        font-size: 16px;   
+    }
+    .text-skills span{
+        color: #2ecc71; 
     }
 
 }
