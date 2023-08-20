@@ -184,7 +184,6 @@ header{
     flex-direction: column;
     align-items: center;
     margin: 0 20px;
-    cursor: pointer;
     width: 24px;
     height: 24px;
     line-height: 12px;
@@ -339,7 +338,8 @@ header{
         justify-content: center;
         align-items: center;
         margin-top: 4%;
-        
+        flex-wrap: wrap;
+        margin-left: auto;        
     }
     
     .programa {
@@ -347,10 +347,12 @@ header{
         flex-direction: column;
         align-items: center;
         margin: 0 20px;
-        cursor: pointer;
-        width: 24px;
-        height: 24px;
+        width: 26%;
+        height: 26%;
         line-height: 12px;
+        overflow: hidden;
+        margin-bottom: 3%;
+        
     }
     
     
@@ -360,12 +362,13 @@ header{
         text-align: center;
         color: white;
         font-size: 12px;
+        display: flex;
+        overflow: hidden;
+        
         
     }
     
-    .programa:hover .nome-programa {
-        display: block;
-    }
+
     
     .programa img {
         width: 24px; /* Ajuste conforme necessário */
