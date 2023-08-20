@@ -1,7 +1,7 @@
 @media screen and (max-width: 768px) {
    
     *{
-        overflow-y: auto;
+        overflow: auto;
     }
     .header {
         flex-direction: column; /* Alinhe verticalmente os itens */
