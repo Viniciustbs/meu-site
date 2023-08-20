@@ -102,6 +102,10 @@ header{
     text-align: center;
 }
 
+.ajmobile{
+    margin-bottom: 10%;
+}
+
 
 .button:hover{
     background-color: #2ecc71;
@@ -224,6 +228,10 @@ header{
         position: fixed;
        
        }
+
+       .ajmobile{
+        margin-bottom: 10%;
+    }
     
     
 }
