@@ -103,7 +103,7 @@ header{
 }
 
 .ajmobile{
-    margin-bottom: 40%;
+    margin-bottom: 40% !important;
 }
 
 
@@ -231,7 +231,7 @@ header{
        }
 
     .ajmobile{
-        margin-bottom: 40%;
+        margin-bottom: 40% !important;
     }
     
     
