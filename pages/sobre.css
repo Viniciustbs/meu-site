@@ -38,6 +38,26 @@
 
 }
 
+/* ini: Preloader */
+ 
+#preloader {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#1a1919; /* cor do background que vai ocupar o body */
+    z-index:999; /* z-index para jogar para frente e sobrepor tudo */
+}
+#preloader .inner {
+    position: absolute;
+    top: 50%; /* centralizar a parte interna do preload (onde fica a animação)*/
+    left: 50%;
+    transform: translate(-50%, -50%);  
+}
+
+/* end: Preloader */
+
 .background{
     background-color: black;
     background: linear-gradient(rgba(0, 0, 0, 0.123), rgba(0, 0, 0, 0.384)),url(../img/background-2.jpg);
@@ -226,6 +246,8 @@ header{
         overflow-y: auto;
     }
     
+
+
     .header {
         flex-direction: column; /* Alinhe verticalmente os itens */
     }
