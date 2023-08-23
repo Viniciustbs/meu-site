@@ -39,6 +39,10 @@
                     <div class="bar"></div>
                     <div class="bar"></div>
                 </div>
+
+            <!-- Este elemento cobre toda a tela quando o menu estiver aberto. Isso permitirá que seja detectado cliques fora do menu.-->
+            <div id="overlay"></div>
+
             
                 <!-- Lista de links do menu hamburguer -->
                 <ul class="menu-links">
@@ -99,21 +103,45 @@
 
 
 
-    <script type="script.js"></script>    
+
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="../preloader.js"></script>
     <script>
         
+        // Função para abrir o menu Hamburguer
+        function openMenu() {
+            document.querySelector('.menu-links').classList.add('active');
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        // Função para fechar o menu Hamburguer
+        function closeMenu() {
+            document.querySelector('.menu-links').classList.remove('active');
+            document.getElementById('overlay').style.display = 'none';
+        }
+
+        // Abre o menu ao clicar no ícone do menu hamburguer
         document.querySelector('.menu-icon').addEventListener('click', function () {
-            document.querySelector('.menu-links').classList.toggle('active');
+            openMenu();
         });
 
-        var isMobile = window.orientation > -1; 
-        if (isMobile)
-            document.getElementById("identifier-sobre").innerHTML = "Uma década de paixão, criatividade e dedicação: essa é a essência da minha jornada como designer, fotógrafo e videomaker. Ao longo desses anos, tive o privilégio de contar histórias visualmente envolventes, capturando momentos únicos e transformando ideias em realidade.<br><br>Através da lente da minha câmera, posso congelar instantes no tempo, eternizar sorrisos, sentimentos e emoções. As imagens que capturo são mais do que meras fotografias; são janelas para o passado, lembranças preciosas e heranças para o futuro. <br> <br>Na edição de vídeos, encontro a magia da transformação. Através de cortes precisos, efeitos harmoniosos e uma trilha sonora cuidadosamente escolhida, dou vida às narrativas e inspiro aqueles que assistem a se emocionarem, aprenderem e sonharem junto comigo. <br> <br>Ser designer me permite dar forma a conceitos e transmitir mensagens com estética e propósito. Cada layout ou ilustração é uma oportunidade de criar conexões, destacar identidades e fazer com que marcas e pessoas se destaquem em meio ao mundo visualmente saturado. <br> <br>Essa jornada tem sido repleta de desafios e conquistas, e sou grato por cada obstáculo superado e por cada oportunidade que me foi concedida. Mas nada disso teria sido possível sem o apoio de todos aqueles que confiaram em mim, que me inspiraram e que compartilharam suas histórias. <br> <br>Através do meu site, convido você a embarcar nesta jornada visual comigo. Seja bem-vindo(a) ao meu universo de imagens, sons e design. Espero que minha paixão e dedicação possam inspirar você a enxergar a beleza no cotidiano e a abraçar sua própria criatividade.";
-        else
-            document.getElementById("identifier-sobre").innerHTML = "Uma década de paixão, criatividade e dedicação: essa é a essência da minha jornada como designer,<br>fotógrafo e videomaker. Ao longo desses anos, tive o privilégio de contar histórias visualmente <br>envolventes, capturando momentos únicos e transformando ideias em realidade.<br><br>Através da lente da minha câmera, posso congelar instantes no tempo, eternizar sorrisos, <br>sentimentos e emoções. As imagens que capturo são mais do que meras fotografias; são janelas <br>para o passado, lembranças preciosas e heranças para o futuro. <br> <br>Na edição de vídeos, encontro a magia da transformação. Através de cortes precisos, efeitos harmoniosos<br>e uma trilha sonora cuidadosamente escolhida, dou vida às narrativas e inspiro aqueles que assistem <br>a se emocionarem, aprenderem e sonharem junto comigo. <br> <br>Ser designer me permite dar forma a conceitos e transmitir mensagens com estética e propósito. Cada<br>layout ou ilustração é uma oportunidade de criar conexões, destacar identidades e fazer com que marcas e<br>pessoas se destaquem em meio ao mundo visualmente saturado. <br> <br>Essa jornada tem sido repleta de desafios e conquistas, e sou grato por cada obstáculo superado<br>e por cada oportunidade que me foi concedida. Mas nada disso teria sido possível sem o apoio de todos<br>aqueles que confiaram em mim, que me inspiraram e que compartilharam suas histórias. <br> <br>Através do meu site, convido você a embarcar nesta jornada visual comigo. Seja bem-vindo(a) ao meu universo<br>de imagens, sons e design. Espero que minha paixão e dedicação possam inspirar você a enxergar a beleza no<br>cotidiano e a abraçar sua própria criatividade.";
+        // Função para fechar o menu
+        function closeMenu() {
+            document.querySelector('.menu-links').classList.remove('active');
+            document.getElementById('overlay').style.display = 'none';
+        }
 
+        // Fecha o menu ao clicar fora do menu ou no ícone do menu hamburguer
+        document.addEventListener('click', function (event) {
+            const menuLinks = document.querySelector('.menu-links');
+            const menuIcon = document.querySelector('.menu-icon');
+            const overlay = document.getElementById('overlay');
+
+            // Verifica se o clique ocorreu fora do menu e do ícone do menu hamburguer
+            if (!menuLinks.contains(event.target) && !menuIcon.contains(event.target) && overlay.style.display === 'block') {
+                closeMenu();
+            }
+        });
     </script>
 
 </body>
