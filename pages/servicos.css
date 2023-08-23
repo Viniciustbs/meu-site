@@ -9,6 +9,12 @@
     list-style: none;
 }
 
+/* Define a cor de destaque ao toque como transparente */
+* {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+
 /* Estilização da barra de rolagem vertical */
 ::-webkit-scrollbar {
     width: 6px; /* Largura da barra de rolagem*/
@@ -28,6 +34,26 @@
   ::-webkit-scrollbar-thumb:hover {
       background-color: #168042; /* Cor da barra de rolagem ao passar o mouse */
   }
+
+  /* ini: Preloader */
+ 
+#preloader {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#1a1919; /* cor do background que vai ocupar o body */
+    z-index:999; /* z-index para jogar para frente e sobrepor tudo */
+}
+#preloader .inner {
+    position: absolute;
+    top: 50%; /* centralizar a parte interna do preload (onde fica a animação)*/
+    left: 50%;
+    transform: translate(-50%, -50%);  
+}
+
+/* end: Preloader */
 
 .content-sobre {
     width: 100%;

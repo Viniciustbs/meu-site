@@ -9,6 +9,12 @@
     list-style: none;
 }
 
+/* Define a cor de destaque ao toque como transparente */
+* {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+
 
 /* Estilização da barra de rolagem vertical */
 ::-webkit-scrollbar {

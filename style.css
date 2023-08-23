@@ -9,6 +9,11 @@
     list-style: none;
 }
 
+/* Define a cor de destaque ao toque como transparente */
+* {
+    -webkit-tap-highlight-color: transparent;
+  }
+
 
 /* Estilização da barra de rolagem vertical */
 ::-webkit-scrollbar {
@@ -31,6 +36,8 @@
   }
 
 /* ini: Preloader */
+
+
  
 #preloader {
     position:fixed;
@@ -179,6 +186,7 @@ header{
         flex-direction: column; /* Alinhe verticalmente os itens */
     }
 
+
     .menu-icon {
         display: block; /* Mostra o ícone de menu */
     }
@@ -190,6 +198,7 @@ header{
     /* Estilos para o ícone de menu hamburguer */
     .menu-icon {
         cursor: pointer;
+        
     }
 
     .bar {
@@ -232,11 +241,6 @@ header{
         text-decoration: none;
         font-size: 16px;
         width: 100%;        
-    }
-    .menu-links a:active{
-     background: none;
-     color: none;
-
     }
 
     .background{
