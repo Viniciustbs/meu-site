@@ -233,6 +233,11 @@ header{
         font-size: 16px;
         width: 100%;        
     }
+    .menu-links a:active{
+     background: none;
+     color: none;
+
+    }
 
     .background{
         background: linear-gradient(rgba(0, 0, 0, 0.123), rgba(0, 0, 0, 0.384)),url(./img/mobile-background.jpg);
