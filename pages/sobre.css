@@ -251,7 +251,6 @@ header{
     }
     
 
-
     .header {
         flex-direction: column; /* Alinhe verticalmente os itens */
     }
@@ -362,6 +361,7 @@ header{
 
     .sobre-texto {
         margin-top: 10px;
+        margin-bottom: 30%;
         
         
       }
