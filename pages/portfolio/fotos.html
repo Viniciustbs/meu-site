@@ -99,7 +99,10 @@
         </div>
 
         <script src="../../preloader.js"></script>
+        
         <script>
+// Este script determina a navegação de imagens e o fechamento do popup.
+
             const popup = document.getElementById("popup");
             const popupImage = document.getElementById("popupImage");
             const closeButton = document.getElementById("closeButton");
@@ -118,7 +121,39 @@
             closeButton.addEventListener("click", () => {
                 popup.style.display = "none";
             });
+
+            let currentImageIndex = 0;
+            const portfolioImagesArray = Array.from(portfolioImages);
+
+            portfolioImages.forEach((image, index) => {
+                image.addEventListener("click", () => {
+                    currentImageIndex = index;
+                    const imageUrl = image.getAttribute("data-src-popup");
+                    popupImage.setAttribute("src", imageUrl);
+                    popup.style.display = "flex";
+                });
+            });
+
+            prevButton.addEventListener("click", () => {
+                currentImageIndex = (currentImageIndex - 1 + portfolioImagesArray.length) % portfolioImagesArray.length;
+                const imageUrl = portfolioImagesArray[currentImageIndex].getAttribute("data-src-popup");
+                popupImage.setAttribute("src", imageUrl);
+            });
+
+            nextButton.addEventListener("click", () => {
+                currentImageIndex = (currentImageIndex + 1) % portfolioImagesArray.length;
+                const imageUrl = portfolioImagesArray[currentImageIndex].getAttribute("data-src-popup");
+                popupImage.setAttribute("src", imageUrl);
+            });
+
+            closeButton.addEventListener("click", () => {
+                popup.style.display = "none";
+            });
             
+        </script>
+
+        <script>
+
             // Função para abrir o menu Hamburguer
             function openMenu() {
                 document.querySelector('.menu-links').classList.add('active');
@@ -154,34 +189,7 @@
                 }
             });
 
-            let currentImageIndex = 0;
-            const portfolioImagesArray = Array.from(portfolioImages);
-
-            portfolioImages.forEach((image, index) => {
-                image.addEventListener("click", () => {
-                    currentImageIndex = index;
-                    const imageUrl = image.getAttribute("data-src-popup");
-                    popupImage.setAttribute("src", imageUrl);
-                    popup.style.display = "flex";
-                });
-            });
-
-            prevButton.addEventListener("click", () => {
-                currentImageIndex = (currentImageIndex - 1 + portfolioImagesArray.length) % portfolioImagesArray.length;
-                const imageUrl = portfolioImagesArray[currentImageIndex].getAttribute("data-src-popup");
-                popupImage.setAttribute("src", imageUrl);
-            });
-
-            nextButton.addEventListener("click", () => {
-                currentImageIndex = (currentImageIndex + 1) % portfolioImagesArray.length;
-                const imageUrl = portfolioImagesArray[currentImageIndex].getAttribute("data-src-popup");
-                popupImage.setAttribute("src", imageUrl);
-            });
-
-            closeButton.addEventListener("click", () => {
-                popup.style.display = "none";
-            });
-            
         </script>
+
     </body>
     </html>
