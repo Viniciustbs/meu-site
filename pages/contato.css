@@ -119,28 +119,43 @@ header{
 }
 
 
-.button{
-    color: #2ecc71;
-    background: transparent;
-    border:solid 1px #2ecc71;
-    padding: 5px;
-    border-radius: 15px;
-    font-size: 12px;
-    cursor: pointer;
-    width: 150px;
+.contato-texto-p {
+
+    width: 100%;
+    height: 100%;
+    align-items: center; /* alinhando verticalmente */ 
+    display: flex;
+    justify-content: center; /* alinhando horizontalmente */
     text-align: center;
+    padding-top: 20px;
 }
 
 
-.button:hover{
-    background-color: #2ecc71;
-    color: #fff;
-    transition: 0.5s;
+
+.redes-social{
+    margin-top: 10px;
 }
 
-.container-text{
-    margin-top: 10%;
-    margin-left: 10%;
+.redes-social a{
+    color: #2ecc71;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+
+
+.container-contato { 
+    padding: 150px 0 0 0px;
+}
+
+.contato-texto {
+
+    width: 100%;
+    height: 100%;
+    align-items: center; /* alinhando verticalmente */ 
+    display: flex;
+    justify-content: center; /* alinhando horizontalmente */
+    text-align: center;
 }
 
 .contato-texto-p {
@@ -154,175 +169,30 @@ header{
     padding-top: 20px;
 }
 
-.text h3{
+.contato-text h3{
     color: #fff;
     font-size: 15px;
+    text-align: center;
 }
 
-.text h1{
+.contato-text h1{
     color: #fff;
     margin-top: 10px;
+    text-align: center;
 }
 
-.text span{
-    color: #2ecc71; 
-}
-
-.text p{
+.contato-text p{
     color: #fff;
     font-weight: 500;
-    font-size: 11px;
-
-}
-
-.redes-social{
     margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
 }
 
-.redes-social a{
-    color: #2ecc71;
-    padding: 10px;
-    margin-top: 5px;
+.tamanho-whats {
+    font-size: 30PX;
 }
 
-.btn{
-    margin-top: 15px;
-}
-
-
-/* Estilos gerais para o formulário */
-.formulario-contato {
-    background-color: transparent;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    border:solid 1px #2ecc71;
-    
-    
-    /* Centralização no canto direito */
-    position: fixed;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    max-width: 400px; /* Define um máximo para o tamanho do formulário */
-}
-
-.formulario-contato h2 {
-    margin-bottom: 10px;
-    font-size: 24px;
-    color: white;
-}
-
-/* Estilos para os rótulos */
-.formulario-contato label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: white;
-}
-
-/* Estilos para os campos de entrada */
-.formulario-contato input[type="text"],
-.formulario-contato input[type="email"],
-.formulario-contato textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-/* Estilos para o botão de envio */
-.formulario-contato button[type="submit"] {
-    background-color: #2ecc71;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-/* Estilo quando o botão é hover */
-.formulario-contato button[type="submit"]:hover {
-    background-color: #0056b3;
-}
-
-/* Estilos para mensagens de erro */
-.formulario-contato input:invalid,
-.formulario-contato textarea:invalid {
-    border-color: #2ecc71;
-}
-
-/* Estilos para a mensagem de sucesso */
-.formulario-contato .sucesso {
-    color: green;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-/* ESTILOS FORMULÁRIO 2*/
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-  }
-  
-  /* Estilos para a seção de conteúdo */
-  .content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  /* Estilos para o formulário de contato */
-  .contato {
-    background-color: #ffffff;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .contato h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .field {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .field:focus {
-    outline: none;
-    border-color: #007bff;
-  }
-  
-  textarea.field {
-    resize: vertical;
-  }
-  
-  input[type="submit"] {
-    background-color: #007bff;
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #0056b3;
-  }
 
 
 @media screen and (max-width: 768px) {
@@ -399,52 +269,3 @@ body {
     
 }
 
-
-.container-contato { 
-    padding: 150px 0 0 0px;
-}
-
-.contato-texto {
-
-    width: 100%;
-    height: 100%;
-    align-items: center; /* alinhando verticalmente */ 
-    display: flex;
-    justify-content: center; /* alinhando horizontalmente */
-    text-align: center;
-}
-
-.contato-texto-p {
-
-    width: 100%;
-    height: 100%;
-    align-items: center; /* alinhando verticalmente */ 
-    display: flex;
-    justify-content: center; /* alinhando horizontalmente */
-    text-align: center;
-    padding-top: 20px;
-}
-
-.contato-text h3{
-    color: #fff;
-    font-size: 15px;
-    text-align: center;
-}
-
-.contato-text h1{
-    color: #fff;
-    margin-top: 10px;
-    text-align: center;
-}
-
-.contato-text p{
-    color: #fff;
-    font-weight: 500;
-    margin-top: 10px;
-    font-size: 14px;
-    text-align: center;
-}
-
-.tamanho-whats {
-    font-size: 30PX;
-}
